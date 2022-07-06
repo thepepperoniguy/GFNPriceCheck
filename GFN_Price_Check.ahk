@@ -45,7 +45,7 @@ copyItem(){
 	
 	;########################## opens your dontpad url of choice in google chrome, i believe other browsers can be used as long as you replace "chrome.exe" with your browser of choice executable
 	;########################## please replace the dontpad url with literally anything you want, for example: http://dontpad.com/canfinallypricecheck, whatever you write here, dontpad will open an empty page where you can write text
-	Run chrome.exe http://dontpad.com/mihgeorgepoetrade
+	Run chrome.exe http://dontpad.com/whateveryouwanthere ;this should be the same as the url that you set as default home page in your steam browser
 	sleep 1500
 	;##########################
 	
