@@ -1,6 +1,6 @@
 	;########################## This macro will not work out of the box
-	;########################## Watch my video to see how the setup works
-	;########################## <yt video link will be here>
+	;########################## Check out the set up tutorial on my GitHub Page
+	;########################## https://github.com/thepepperoniguy/GFNPriceCheck
 F6::copyItem() ;F6 is the key I am using to start this macro, change to whatever you like
 F5::gotoHideout() ;F6 is the key I am using to quickly teleport to my hideout, change to whatever you like
 
