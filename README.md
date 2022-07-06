@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Hey guys, recently I started playing POE on Geforce Now, where I thought price checking was impossible, until I found a workaround in a discussion on  @SnosMe's github <br>https://github.com/SnosMe/awakened-poe-trade/issues/170<br>you can check it out to find out more about the process<br><br>However, I found doing that process manually over and over again, a bit annoying, so I finally made this simple AHK script to automate that process.<br><br>I have to thank everyone that took part in the above discussion for making this possible, and u/TheUnseenForce for suggesting some improvements to the script.</p>
+<p align="left">Hey guys, recently I started playing POE on Geforce Now, where I thought price checking was impossible, until I found a workaround in a discussion on  @SnosMe's github <br>https://github.com/SnosMe/awakened-poe-trade/issues/170<br>you can check it out to find out more about the process<br><br>However, I found doing that process manually over and over again, a bit annoying, so I finally made this simple AHK script to automate that process.<br><br>I have to thank everyone that took part in the above discussion for making this possible, and u/TheUnseenForce for suggesting some improvements to the script. <br>https://youtu.be/az9wr7wHbME here's a showcase</p>
 
 ###
 
