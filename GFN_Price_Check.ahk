@@ -44,6 +44,8 @@ copyItem(){
 	sendinput {ctrl down} {v down}
 	sleep 70
 	sendinput {v up}{ctrl up}
+	sleep 70
+	sendinput {esc}
 	;##########################
 	sleep 700
 	
