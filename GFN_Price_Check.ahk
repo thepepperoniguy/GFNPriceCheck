@@ -70,14 +70,16 @@ copyItem(){
 
 	;########################## Waits for The window to be created, sends Awakened ctrl + alt + d and puts the data in the clipboard for awakened to parse
 	;########################## When the window is changed it restores the previous clipboard and destroys the window
-	WinWaitActive, Path of Exile
+	WinWaitActive, Path of Exile,, 2
 	Sleep 250
 	SendInput, ^!d
 	sleep 55
 	clipboard := out1
-	while WinActive("Path of Exile") or WinActive("Awakened PoE Trade")
+	while WinActive("Path of Exile"){
 		sleep 200
+		}
 	clipboard := saved
-  	Gui, Destroy
+  	WinGetTitle, Title, Path of Exile
+	WinKill, %Title%
 	;##########################
 	}
