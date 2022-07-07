@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">Made a short video tutorial, explaining how to set this script up for your pc, and make it work on any resolution.<br>https://youtu.be/Ch55zWZmXXI</p>
+<p align="left">Made a short video tutorial, explaining how to set this script up for your pc, and make it work on any resolution.<br>https://youtu.be/Ch55zWZmXXI<br><br>We got a new update thanks to @gvieiraaa<br><br>- The window used to trick Awakened Poe Trade into thinking it's focused on the poe window now closes after using the woke poe trade price check.<br>- Fixed a bug that caused the [Space] key to be pressed for some reason at the beginning of the script.<br>- Fixed a bug that prevented the user to re-use the script to price-check another item, after the first use.</p>
 
 ###
 
