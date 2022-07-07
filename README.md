@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">You no longer need to launch google chrome and change the window title in awakened poe trade settings.<br><br>The macro now opens a GUI window, titled "Path of Exile" which will trick Awakened Poe Trade into thinking that you are focused on the Poe window</p>
+<p align="left">Made a short video tutorial, explaining how to set this script up for your pc, and make it work on any resolution.<br>https://youtu.be/Ch55zWZmXXI</p>
 
 ###
 
@@ -57,3 +57,4 @@
 <p align="left">- everyone that took part in this discussion https://github.com/SnosMe/awakened-poe-trade/issues/170<br>- u/TheUnseenForce <br>- u/Gvieira</p>
 
 ###
+Profile Readme Generator
