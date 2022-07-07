@@ -1,9 +1,6 @@
 	;########################## This macro will not work out of the box
 	;########################## Check out the set up tutorial on my GitHub Page
 	;########################## https://github.com/thepepperoniguy/GFNPriceCheck
-	
-url := "http://dontpad.com/poetest123" ; Choose an unique address
-
 F6::copyItem() ;F6 is the key I am using to start this macro, change to whatever you like
 F5::gotoHideout() ;F5 is the key I am using to quickly teleport to my hideout, change to whatever you like
 
@@ -17,9 +14,7 @@ gotoHideout(){
 }
 
 copyItem(){
-	static HTTP := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-	global url
-	
+
 	;########################## This portion of the script is used to copy the data of the item you want to price check, do not change this
 	sendinput {alt down} {ctrl down} {c down}
 	sleep 70
@@ -48,36 +43,26 @@ copyItem(){
 	;##########################
 	sleep 700
 	
+	;########################## this is the link you set as home page in your steam browser during the setup
+	user_chosen_site := "http://dontpad.com/whateveryouwanthere"
+
 	;########################## this copies the content of the dontpad.com page into your clipboard 
-	HTTP.Open("GET", url)
+	static HTTP := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	HTTP.Open("GET", user_chosen_site)
 	HTTP.Send()
 	RegExMatch(HTTP.ResponseText(), "<textarea id=""text"">(.*)</textarea>", out)
+	clipboard := out1
 	;##########################
 	
-	;########################## saves current clipboard and clears it
-	saved := clipboard
-	clipboard := ""
-	;##########################
-	
-	;########################## opens a dummy transparent window with the name "Path of Exile" to trick awakened poe trade into thinking it's focused on the poe window.
+	;########################## opens a windows with the name "Path of Exile" to trick awakened poe trade into thinking it's focused on the poe window.
+	Gui, Destroy
 	Gui, New,, Path of Exile
-	Gui, Color, 0x000000
-	Gui, +AlwaysOnTop -Border +LastFound -SysMenu +Owner -Caption
-	WinSet, TransColor, 0x000000 255
 	Gui, Margin, 10, 10
+	Gui, Add, Edit, ReadOnly ,%clipboard%
 	Gui, Show, maximize Center
 	;##########################
 
-	;########################## Waits for The window to be created, sends Awakened ctrl + alt + d and puts the data in the clipboard for awakened to parse
-	;########################## When the window is changed it restores the previous clipboard and destroys the window
-	WinWaitActive, Path of Exile
-	Sleep 250
-	SendInput, ^!d
-	sleep 55
-	clipboard := out1
-	while WinActive("Path of Exile") or WinActive("Awakened PoE Trade")
-		sleep 200
-	clipboard := saved
-  	Gui, Destroy
-	;##########################
+	sleep 300
+	Send, ^d
+	sleep 70
 	}
