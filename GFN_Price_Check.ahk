@@ -5,7 +5,7 @@
 url := "http://dontpad.com/poetest123" ; Choose an unique address
 
 F6::copyItem() ;F6 is the key I am using to start this macro, change to whatever you like
-F5::gotoHideout() ;F6 is the key I am using to quickly teleport to my hideout, change to whatever you like
+F5::gotoHideout() ;F5 is the key I am using to quickly teleport to my hideout, change to whatever you like
 
 gotoHideout(){
 
