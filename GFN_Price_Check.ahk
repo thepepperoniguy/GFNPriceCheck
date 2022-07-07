@@ -21,9 +21,8 @@ copyItem(){
 	global url
 	
 	;########################## This portion of the script is used to copy the data of the item you want to price check, do not change this
-	sendinput {alt down} {ctrl down} {c down}
+	SendInput, !^c
 	sleep 70
-	sendinput {c up} {alt up} {ctrl up}
 	;########################## 
 	
 	sleep 70 
