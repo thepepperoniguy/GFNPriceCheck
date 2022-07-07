@@ -47,7 +47,7 @@ copyItem(){
 	user_chosen_site := "http://dontpad.com/whateveryouwanthere"
 
 	;########################## this copies the content of the dontpad.com page into your clipboard 
-	HTTP := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	static HTTP := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	HTTP.Open("GET", user_chosen_site)
 	HTTP.Send()
 	RegExMatch(HTTP.ResponseText(), "<textarea id=""text"">(.*)</textarea>", out)
@@ -58,7 +58,7 @@ copyItem(){
 	Gui, Destroy
 	Gui, New,, Path of Exile
 	Gui, Margin, 10, 10
-	Gui, Add, Edit, ,%clipboard%
+	Gui, Add, Edit, ReadOnly ,%clipboard%
 	Gui, Show, maximize Center
 	;##########################
 
