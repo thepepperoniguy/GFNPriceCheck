@@ -43,19 +43,26 @@ copyItem(){
 	;##########################
 	sleep 700
 	
-	;########################## opens your dontpad url of choice in google chrome, i believe other browsers can be used as long as you replace "chrome.exe" with your browser of choice executable
-	;########################## please replace the dontpad url with literally anything you want, for example: http://dontpad.com/canfinallypricecheck, whatever you write here, dontpad will open an empty page where you can write text
-	Run chrome.exe http://dontpad.com/whateveryouwanthere ;this should be the same as the url that you set as default home page in your steam browser
-	sleep 1500
+	;########################## this is the link you set as home page in your steam browser during the setup
+	user_chosen_site := "http://dontpad.com/whateveryouwanthere"
+
+	;########################## this copies the content of the dontpad.com page into your clipboard 
+	HTTP := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	HTTP.Open("GET", user_chosen_site)
+	HTTP.Send()
+	RegExMatch(HTTP.ResponseText(), "<textarea id=""text"">(.*)</textarea>", out)
+	clipboard := out1
 	;##########################
 	
-	Click, 914, 428
+	;########################## opens a windows with the name "Path of Exile" to trick awakened poe trade into thinking it's focused on the poe window.
+	Gui, Destroy
+	Gui, New,, Path of Exile
+	Gui, Margin, 10, 10
+	Gui, Add, Edit, ,%clipboard%
+	Gui, Show, maximize Center
+	;##########################
+
+	sleep 300
+	Send, ^d
 	sleep 70
-	SendInput, {ctrl down} {a down}
-	sleep 70
-	SendInput, {a up} {ctrl up}
-	sleep 70	
-	SendInput, {ctrl down} {d down}
-	sleep 70
-	SendInput, {d up} {ctrl up}
 	}
