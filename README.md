@@ -10,6 +10,12 @@
 
 ###
 
+<div align="center">
+  <img height="300" src="https://i.imgur.com/ThyDTpu.jpg"  />
+</div>
+
+###
+
 <h3 align="left">How to set this up</h3>
 
 ###
@@ -57,4 +63,3 @@
 <p align="left">- everyone that took part in this discussion https://github.com/SnosMe/awakened-poe-trade/issues/170<br>- u/TheUnseenForce <br>- u/Gvieira</p>
 
 ###
-Profile Readme Generator
